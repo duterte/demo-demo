@@ -1,0 +1,51 @@
+# This is use to test back-end endpoint
+# This is similar to postman
+# install vscode extension "REST Client" in order to work
+
+GET http://localhost:3000/employees HTTP/1.1
+
+###
+
+GET http://localhost:3000/employees/3 HTTP/1.1
+
+###
+
+POST http://localhost:3000/employees/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "German Ochea",
+  "jobTitle": "Manager",
+  "department": "HelloWorld"
+}
+
+###
+
+PUT http://localhost:3000/employees HTTP/1.1
+Content-Type: application/json
+
+{
+  "employeeNumber": 3,
+  "name": "Alex",
+  "jobTitle": "Manager",
+  "department": "Hyverad"
+}
+
+###
+
+DELETE http://localhost:3000/employees/0 HTTP/1.1
+
+###
+
+PATCH http://localhost:3000/employees/3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Delmar Duterte",
+  "jobTitle": "Supervisor",
+  "department": "Junk Yard"
+}
+
+### 
+
+HEAD http://localhost:3000/employees HTTP/1.1
